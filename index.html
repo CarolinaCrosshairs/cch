@@ -42,7 +42,7 @@
             position:relative;
         }
 
-        /* ONLY CHANGED TO RED + FASTER */
+        /* RED PULSING EFFECT */
 
         body::before{
             content:"";
@@ -101,6 +101,8 @@
             }
         }
 
+        /* CONTAINER */
+
         .container{
             width:100%;
             max-width:450px;
@@ -125,6 +127,8 @@
             z-index:2;
         }
 
+        /* PROFILE IMAGE */
+
         .profile-pic{
             width:200px;
             height:200px;
@@ -143,6 +147,8 @@
                 0 0 35px rgba(0,191,255,0.65);
         }
 
+        /* TITLE */
+
         h1{
             font-size:34px;
 
@@ -150,6 +156,8 @@
 
             letter-spacing:1px;
         }
+
+        /* TAGLINE */
 
         .tagline{
             color:#cbd5e1;
@@ -160,6 +168,8 @@
 
             margin-bottom:28px;
         }
+
+        /* TOPICS */
 
         .topics{
             margin-bottom:28px;
@@ -182,6 +192,8 @@
 
             color:#e2e8f0;
         }
+
+        /* BUTTONS */
 
         .link-btn{
             display:block;
@@ -218,6 +230,8 @@
             opacity:0.92;
         }
 
+        /* BOTTOM BANNER */
+
         .bottom-banner{
             width:100%;
 
@@ -231,8 +245,29 @@
                 0 0 25px rgba(0,0,0,0.45);
         }
 
+        /* SECOND FOOTER LOGO */
+
+        .second-footer-logo{
+
+            width:100%;
+
+            max-width:260px;
+
+            margin:24px auto 0 auto;
+
+            display:block;
+
+            object-fit:contain;
+
+            opacity:0.95;
+
+            background:none;
+        }
+
+        /* FOOTER */
+
         .footer{
-            margin-top:24px;
+            margin-top:22px;
 
             font-size:13px;
 
@@ -246,18 +281,26 @@
 
     <div class="container">
 
+        <!-- PROFILE IMAGE -->
+
         <img
             src="./logo.jpg"
             alt="Carolina Crosshairs Logo"
             class="profile-pic"
         >
 
+        <!-- TITLE -->
+
         <h1>Carolina Crosshairs</h1>
+
+        <!-- DESCRIPTION -->
 
         <p class="tagline">
             Daily Posts on X<br>
             Discussion & Bet Props in Discord
         </p>
+
+        <!-- TOPICS -->
 
         <div class="topics">
 
@@ -267,6 +310,8 @@
             <span class="topic">NASCAR</span>
 
         </div>
+
+        <!-- SOCIAL BUTTONS -->
 
         <a
             href="https://x.com/nccrosshairs?s=21&t=eKC4xWjZ_6Gho3PfQ4EITw"
@@ -284,11 +329,23 @@
             Join The Discord
         </a>
 
+        <!-- MAIN BANNER -->
+
         <img
             src="./CCH HQ BANNER.jpg"
             alt="Carolina Sports Banner"
             class="bottom-banner"
         >
+
+        <!-- SECOND FOOTER LOGO -->
+
+        <img
+            src="./America250_logo.svg.png"
+            alt="America 250 Logo"
+            class="second-footer-logo"
+        >
+
+        <!-- FOOTER -->
 
         <div class="footer">
             © 2026 Carolina Crosshairs
