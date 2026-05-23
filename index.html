@@ -42,6 +42,8 @@
             position:relative;
         }
 
+        /* ONLY CHANGED TO RED + FASTER */
+
         body::before{
             content:"";
 
@@ -55,34 +57,42 @@
 
             background:
                 radial-gradient(
-                    rgba(0,191,255,0.15),
+                    rgba(255,0,0,0.22),
                     transparent 70%
                 );
 
-            animation:lightningFlash 6s infinite;
+            animation:redPulse 1.5s infinite;
 
             pointer-events:none;
         }
 
-        @keyframes lightningFlash{
+        @keyframes redPulse{
 
             0%{
                 opacity:0;
             }
 
-            2%{
+            8%{
                 opacity:1;
             }
 
-            4%{
+            16%{
+                opacity:0.15;
+            }
+
+            24%{
+                opacity:0.95;
+            }
+
+            32%{
                 opacity:0.2;
             }
 
-            6%{
-                opacity:0.9;
+            40%{
+                opacity:1;
             }
 
-            8%{
+            48%{
                 opacity:0;
             }
 
