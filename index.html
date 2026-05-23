@@ -8,6 +8,13 @@
 
     <title>Carolina Crosshairs</title>
 
+    <!-- FONT AWESOME ICONS -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
     <style>
 
         *{
@@ -22,21 +29,27 @@
 
             background:
                 linear-gradient(
-                    rgba(11,15,26,0.88),
-                    rgba(17,24,39,0.92)
+                    rgba(6,10,20,0.45),
+                    rgba(10,15,30,0.65)
                 ),
-                url('https://images.unsplash.com/photo-1500674425229-f692875b0ab7?q=80&w=2070&auto=format&fit=crop');
+                url('./CCH HQ BANNER.jpg');
 
             background-size:cover;
+
             background-position:center;
+
             background-repeat:no-repeat;
+
+            background-attachment:fixed;
 
             color:white;
 
             min-height:100vh;
 
             display:flex;
+
             justify-content:center;
+
             align-items:center;
 
             padding:20px;
@@ -46,7 +59,25 @@
             position:relative;
         }
 
-        /* RED PULSING EFFECT */
+        /* DARK OVERLAY */
+
+        body::after{
+
+            content:"";
+
+            position:fixed;
+
+            inset:0;
+
+            background:
+                rgba(0,0,0,0.38);
+
+            z-index:0;
+
+            pointer-events:none;
+        }
+
+        /* RED PULSE EFFECT */
 
         body::before{
 
@@ -62,13 +93,15 @@
 
             background:
                 radial-gradient(
-                    rgba(255,0,0,0.22),
+                    rgba(255,0,0,0.24),
                     transparent 70%
                 );
 
-            animation:redPulse 1.5s infinite;
+            animation:redPulse 1.4s infinite;
 
             pointer-events:none;
+
+            z-index:1;
         }
 
         @keyframes redPulse{
@@ -82,15 +115,15 @@
             }
 
             16%{
-                opacity:0.15;
+                opacity:0.2;
             }
 
             24%{
-                opacity:0.95;
+                opacity:1;
             }
 
             32%{
-                opacity:0.2;
+                opacity:0.3;
             }
 
             40%{
@@ -106,31 +139,34 @@
             }
         }
 
-        /* CONTAINER */
+        /* MAIN CONTAINER */
 
         .container{
 
             width:100%;
-            max-width:450px;
 
-            background:rgba(255,255,255,0.05);
+            max-width:460px;
 
-            border:1px solid rgba(255,255,255,0.08);
+            background:
+                rgba(255,255,255,0.07);
 
-            border-radius:24px;
+            border:
+                1px solid rgba(255,255,255,0.1);
 
-            padding:38px 26px;
+            border-radius:28px;
+
+            padding:40px 28px;
 
             text-align:center;
 
-            backdrop-filter:blur(14px);
+            backdrop-filter:blur(10px);
 
             box-shadow:
-                0 0 40px rgba(0,0,0,0.55);
+                0 0 40px rgba(0,0,0,0.6);
 
             position:relative;
 
-            z-index:2;
+            z-index:5;
         }
 
         /* LOGO WRAPPER */
@@ -142,7 +178,7 @@
             width:220px;
             height:220px;
 
-            margin:0 auto 24px auto;
+            margin:0 auto 26px auto;
 
             display:flex;
             align-items:center;
@@ -167,8 +203,8 @@
             z-index:5;
 
             box-shadow:
-                0 0 18px rgba(0,191,255,0.8),
-                0 0 40px rgba(255,0,0,0.45);
+                0 0 18px rgba(0,191,255,0.85),
+                0 0 42px rgba(255,0,0,0.45);
 
             animation:
                 logoPulse 1.4s infinite ease-in-out;
@@ -200,11 +236,11 @@
                 0 0 40px rgba(168,85,247,0.4);
 
             animation:
-                electricSpin 1.4s linear infinite,
+                electricSpin 1.3s linear infinite,
                 electricFlicker 0.12s infinite;
         }
 
-        /* SECONDARY OUTER RING */
+        /* SECOND OUTER RING */
 
         .logo-wrapper::after{
 
@@ -231,7 +267,7 @@
 
         h1{
 
-            font-size:34px;
+            font-size:36px;
 
             margin-bottom:14px;
 
@@ -241,59 +277,155 @@
                 0 0 12px rgba(255,0,0,0.45);
         }
 
-        /* TAGLINE */
+        /* DESCRIPTION */
 
         .tagline{
 
-            color:#cbd5e1;
+            color:#e2e8f0;
 
             font-size:16px;
 
-            line-height:1.7;
+            line-height:1.9;
 
-            margin-bottom:28px;
+            margin-bottom:30px;
         }
 
-        /* TOPICS */
+        /* SPORTS SCORE DIVIDER */
 
-        .topics{
-            margin-bottom:28px;
+        .score-divider{
+
+            position:relative;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:18px;
+
+            margin:28px 0;
+
+            width:100%;
         }
 
-        .topic{
+        .score-divider::before,
+        .score-divider::after{
 
-            display:inline-block;
+            content:"";
 
-            background:#1e293b;
+            flex:1;
 
-            border:1px solid #334155;
+            height:3px;
 
-            padding:10px 15px;
+            border-radius:999px;
 
-            border-radius:30px;
-
-            margin:6px;
-
-            font-size:14px;
-
-            color:#e2e8f0;
-
-            transition:0.3s ease;
-        }
-
-        .topic:hover{
-
-            transform:translateY(-3px);
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,0,0,0.9),
+                    rgba(0,191,255,0.9),
+                    transparent
+                );
 
             box-shadow:
-                0 0 15px rgba(255,0,0,0.45);
+                0 0 12px rgba(255,0,0,0.45),
+                0 0 18px rgba(0,191,255,0.35);
         }
 
-        /* BUTTONS */
+        .score-box{
+
+            min-width:120px;
+
+            padding:10px 18px;
+
+            border-radius:14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(15,23,42,0.95),
+                    rgba(30,41,59,0.92)
+                );
+
+            border:
+                2px solid rgba(255,255,255,0.08);
+
+            color:white;
+
+            font-size:15px;
+
+            font-weight:700;
+
+            letter-spacing:1px;
+
+            text-transform:uppercase;
+
+            text-align:center;
+
+            box-shadow:
+                0 0 20px rgba(255,0,0,0.25),
+                0 0 28px rgba(0,191,255,0.18);
+
+            position:relative;
+
+            overflow:hidden;
+        }
+
+        .score-box::before{
+
+            content:"";
+
+            position:absolute;
+
+            top:0;
+            left:-100%;
+
+            width:100%;
+            height:100%;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    transparent,
+                    rgba(255,255,255,0.22),
+                    transparent
+                );
+
+            animation:scoreShine 3s infinite;
+        }
+
+        .score-box span{
+
+            color:#ef4444;
+
+            text-shadow:
+                0 0 10px rgba(255,0,0,0.6);
+        }
+
+        @keyframes scoreShine{
+
+            0%{
+                left:-100%;
+            }
+
+            100%{
+                left:120%;
+            }
+        }
+
+        /* SOCIAL BUTTONS */
 
         .link-btn{
 
-            display:block;
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:12px;
 
             width:100%;
 
@@ -318,41 +450,42 @@
             overflow:hidden;
         }
 
+        .link-btn i{
+
+            font-size:22px;
+        }
+
         .twitter{
-            background:#1DA1F2;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1DA1F2,
+                    #0ea5e9
+                );
         }
 
         .discord{
-            background:#5865F2;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #5865F2,
+                    #7289da
+                );
         }
 
         .link-btn:hover{
 
             transform:scale(1.04);
 
-            opacity:0.94;
+            opacity:0.96;
 
             box-shadow:
                 0 0 22px rgba(255,0,0,0.55);
         }
 
-        /* BOTTOM BANNER */
-
-        .bottom-banner{
-
-            width:100%;
-
-            margin-top:30px;
-
-            border-radius:16px;
-
-            border:2px solid rgba(255,255,255,0.1);
-
-            box-shadow:
-                0 0 25px rgba(0,0,0,0.45);
-        }
-
-        /* SECOND FOOTER LOGO */
+        /* FOOTER IMAGE */
 
         .second-footer-logo{
 
@@ -360,15 +493,13 @@
 
             max-width:260px;
 
-            margin:24px auto 0 auto;
+            margin:28px auto 0 auto;
 
             display:block;
 
             object-fit:contain;
 
             opacity:0.95;
-
-            background:none;
         }
 
         /* FOOTER */
@@ -379,7 +510,7 @@
 
             font-size:13px;
 
-            color:#94a3b8;
+            color:#cbd5e1;
         }
 
         /* ANIMATIONS */
@@ -475,48 +606,58 @@
         <!-- DESCRIPTION -->
 
         <p class="tagline">
+
             Daily Posts on X<br>
-            Discussion & Bet Props in Discord
+
+            Discussion & Bet Props in Discord<br><br>
+
+            Carolina Panthers • Charlotte Hornets<br>
+
+            Carolina Hurricanes • NASCAR
+
         </p>
 
-        <!-- TOPICS -->
+        <!-- SPORTS DIVIDER -->
 
-        <div class="topics">
+        <div class="score-divider">
 
-            <span class="topic">Charlotte Hornets</span>
-            <span class="topic">Carolina Panthers</span>
-            <span class="topic">Carolina Hurricanes</span>
-            <span class="topic">NASCAR</span>
+            <div class="score-box">
+
+                LIVE • <span>CCH</span>
+
+            </div>
 
         </div>
 
-        <!-- SOCIAL BUTTONS -->
+        <!-- X BUTTON -->
 
         <a
             href="https://x.com/nccrosshairs?s=21&t=eKC4xWjZ_6Gho3PfQ4EITw"
             class="link-btn twitter"
             target="_blank"
         >
+
+            <i class="fa-brands fa-x-twitter"></i>
+
             Follow on X
+
         </a>
+
+        <!-- DISCORD BUTTON -->
 
         <a
             href="https://discord.gg/RkWfmrhzq"
             class="link-btn discord"
             target="_blank"
         >
+
+            <i class="fa-brands fa-discord"></i>
+
             Join The Discord
+
         </a>
 
-        <!-- MAIN BANNER -->
-
-        <img
-            src="./CCH HQ BANNER.jpg"
-            alt="Carolina Sports Banner"
-            class="bottom-banner"
-        >
-
-        <!-- SECOND FOOTER LOGO -->
+        <!-- FOOTER IMAGE -->
 
         <img
             src="./America250_logo.svg.png"
